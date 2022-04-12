@@ -36,7 +36,7 @@ jobs:
           context: .
           push: true
           tags: cherkasik/rdga-database:latest
-          build-args:
-            POSTGRES_USER=${{ secrets.DATABASE_USER }},
-            POSTGRES_PASSWORD=${{ secrets.DATABASE_PASSWORD }},
+          build-args: |
+            POSTGRES_USER=${{ secrets.DATABASE_USER }}
+            POSTGRES_PASSWORD=${{ secrets.DATABASE_PASSWORD }}
             POSTGRES_DB=${{ secrets.DATABASE }}
