@@ -14,3 +14,11 @@ jobs:
       DATABASE: ${{ secrets.DATABASE }}
       DATABASE_USER: ${{ secrets.DATABASE_USER }}
       DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+  deploy:
+    needs: update-docker
+    uses: RDGAapp/docker-compose/.github/workflows/update.yml@main
+    secrets:
+      VDS_HOST: ${{ secrets.VDS_HOST }}
+      VDS_USER: ${{ secrets.VDS_USER }}
+      VDS_PASSWORD: ${{ secrets.VDS_PASSWORD }}
+      VDS_PORT: ${{ secrets.VDS_PORT }}
