@@ -1,4 +1,4 @@
-FROM postgres:14.2
+FROM postgres:16-alpine
 
 ARG POSTGRES_USER
 ARG POSTGRES_PASSWORD
